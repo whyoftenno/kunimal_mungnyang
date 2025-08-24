@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+img { 
+  max-width: 257px;
+  width: 100%;
+  height:auto; 
+  display:block; 
+  margin: 1em auto;
+  image-rendering: pixelated;
+}
+
+img.original {
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+:root {
+  --ink: #303030; 
+}
+
+body {
+  background:#fff;
+  color: var(--ink);
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Malgun Gothic", sans-serif;
+  line-height:1.7;
+  font-size:18px;
+  text-align:center;
+  padding: 2rem;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+h1, h2 { margin: 0 0 .8rem; font-size: 24px; color: var(--ink); }
+p { margin: 0 0 1.2rem; }
+ul { list-style:none; padding:0; margin:0; }
+
+.container { max-width: 720px; margin: 0 auto; text-align: left; }
+.center { text-align: center; }
+
+.figure {
+  margin: 1rem auto 1.25rem;
+  max-width: 640px; 
+}
+.figure img {
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+}
+.figure figcaption {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: .5rem;
+  text-align: center;
+}
+
+a.btn {
+  display: inline-block;
+  margin: 0.6em auto;
+  padding: .6em 1.2em;
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  background: var(--ink);
+  color: #fff;
+  text-decoration:none;
+  font-size: 1rem;
+  transition: background .2s ease, color .2s ease, transform .12s ease;
+  cursor: pointer;
+  max-width: 280px;
+  width: auto;
+}
+a.btn:hover { background:#fff; color: var(--ink); transform: translateY(-1px); }
+a.btn:active { transform: translateY(0); }
+
+.btn-ghost {
+  background:#fff; color: var(--ink);
+}
+.btn-ghost:hover {
+  background:#f6f6f6;
+}
+
+.link {
+  color: var(--ink); text-decoration:none; border-bottom: 1px solid #11122a33;
+}
+.link:hover { border-bottom-color: var(--ink); }
+
+@media (max-width: 600px){
+  body { font-size:16px; padding: 1.25rem; }
+  h1 { font-size: 1.35rem; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  a.btn { transition: none; }
+}
